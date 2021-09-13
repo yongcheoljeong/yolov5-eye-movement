@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 
 class Burst:
-
+    # self.get_stim_on_frames() 메소드를 통해 언제 stimulation이 on/off 되었는지 n_frame, stim을 field로 dataframe을 return
     def __init__(self, video_name):
         self.video_name = video_name
         self.read_video_info() 
@@ -53,14 +53,14 @@ class Burst:
 
         onoff = [frames, flags]
 
-        df_onoff = pd.DataFrame(onoff, index=['nFrame', 'flag']).transpose()
+        df_onoff = pd.DataFrame(onoff, index=['n_frame', 'stim']).transpose()
 
         if stim_on_flag == 1:
-            df_onoff['flag'].replace({1:'on'}, inplace=True)
-            df_onoff['flag'].replace({0:'off'}, inplace=True)
+            df_onoff['stim'].replace({1:'on'}, inplace=True)
+            df_onoff['stim'].replace({0:'off'}, inplace=True)
         elif stim_on_flag == 0:
-            df_onoff['flag'].replace({0:'on'}, inplace=True)
-            df_onoff['flag'].replace({1:'off'}, inplace=True)
+            df_onoff['stim'].replace({0:'on'}, inplace=True)
+            df_onoff['stim'].replace({1:'off'}, inplace=True)
 
         return df_onoff
 
