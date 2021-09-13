@@ -56,11 +56,11 @@ class Burst:
         df_onoff = pd.DataFrame(onoff, index=['n_frame', 'stim']).transpose()
 
         if stim_on_flag == 1:
-            df_onoff['stim'].replace({1:'on'}, inplace=True)
-            df_onoff['stim'].replace({0:'off'}, inplace=True)
+            df_onoff['stim'].replace({1:True}, inplace=True)
+            df_onoff['stim'].replace({0:False}, inplace=True)
         elif stim_on_flag == 0:
-            df_onoff['stim'].replace({0:'on'}, inplace=True)
-            df_onoff['stim'].replace({1:'off'}, inplace=True)
+            df_onoff['stim'].replace({0:True}, inplace=True)
+            df_onoff['stim'].replace({1:False}, inplace=True)
 
         return df_onoff
 
