@@ -32,7 +32,8 @@ class Burst:
 
     def get_stim_startend_frame(self):
         stim_start_frame = int(self.this_info['StimulationStartFrame'])
-        stim_end_frame = int(self.this_info['StimulationEndFrame'])
+        # stim_end_frame = int(self.this_info['StimulationEndFrame']) # manual sync
+        stim_end_frame = int(round(stim_start_frame + 299.7)) # auto sync
 
         return stim_start_frame, stim_end_frame 
     
@@ -56,10 +57,8 @@ class Burst:
 
         if stim_on_flag == 1:
             df_onoff['stim'].replace({1:True, 0:False}, inplace=True)
-            # df_onoff['stim'].replace({0:False}, inplace=True)
         elif stim_on_flag == 0:
             df_onoff['stim'].replace({0:True, 1:False}, inplace=True)
-            # df_onoff['stim'].replace({0:True}, inplace=True)
 
         return df_onoff
 
