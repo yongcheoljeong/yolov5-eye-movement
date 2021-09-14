@@ -19,9 +19,8 @@ class Burst:
     def check_video_name(self):
         bursts = self.video_info[self.video_info['Frequency'] == 20]
         bursts_video_names = bursts['VideoName']
-        if (bursts_video_names.str.contains(self.video_name).any()) == True:
-            print(f"{self.video_name} is found.")
-            self.this_info = self.video_info.loc[self.video_info['VideoName'] == self.video_name, :]
+        if (bursts_video_names.str.contains(self.video_name.lower(), case=False).any()) == True:
+            self.this_info = self.video_info.loc[self.video_info['VideoName'].str.lower() == self.video_name.lower(), :]
         else: 
             raise Exception(f"There is no file named {self.video_name} as 20Hz 5ms.")
 
@@ -56,11 +55,11 @@ class Burst:
         df_onoff = pd.DataFrame(onoff, index=['n_frame', 'stim']).transpose()
 
         if stim_on_flag == 1:
-            df_onoff['stim'].replace({1:True}, inplace=True)
-            df_onoff['stim'].replace({0:False}, inplace=True)
+            df_onoff['stim'].replace({1:True, 0:False}, inplace=True)
+            # df_onoff['stim'].replace({0:False}, inplace=True)
         elif stim_on_flag == 0:
-            df_onoff['stim'].replace({0:True}, inplace=True)
-            df_onoff['stim'].replace({1:False}, inplace=True)
+            df_onoff['stim'].replace({0:True, 1:False}, inplace=True)
+            # df_onoff['stim'].replace({0:True}, inplace=True)
 
         return df_onoff
 
