@@ -1,4 +1,23 @@
 60 L 20hz 5ms 5s.MP4
 60 L base.MP4
 60 R 20hz 5ms 5s.MP4
-
+32 L 0.2hz 50ms.MP4
+32 R 0.2hz 50ms.MP4
+34 L 0.2hz 50ms.MP4
+34 R 0.2hz 50ms.MP4
+38 L 20hz 5ms 5s.MP4
+38 R 20hz 5ms 5s.MP4
+40 L 20hz 5ms 5s.MP4
+40 R 20hz 5ms 5s.MP4
+42 L 20hz 5ms 5s.MP4
+42 R 20hz 5ms 5s.MP4
+61 L 20hz 5ms 5s.MP4
+61 R 20hz 5ms 5s.MP4
+62 L 20hz 5ms 5s.MP4
+62 R 20hz 5ms 5s.MP4
+63 L 20hz 5ms 5s.MP4
+63 R 20hz 5ms 5s.MP4
+64 L 20hz 5ms 5s.MP4
+64 R 20hz 5ms 5s.MP4
+66 L 20hz 5ms 5s.MP4
+66 R 20hz 5ms 5s.MP4
