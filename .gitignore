@@ -1,5 +1,7 @@
 # files
 *.mp4 
+*.xlsx
+*.png
 
 # videos
 videos/

@@ -6,7 +6,6 @@
 34 L 0.2hz 50ms.MP4
 34 R 0.2hz 50ms.MP4
 38 L 20hz 5ms 5s.MP4
-38 R 20hz 5ms 5s.MP4
 40 L 20hz 5ms 5s.MP4
 40 R 20hz 5ms 5s.MP4
 42 L 20hz 5ms 5s.MP4
@@ -27,3 +26,4 @@
 32 R 20hz 5ms 5s.mp4
 34 L 20hz 5ms 5s.mp4
 34 R 20hz 5ms 5s.mp4
+38 R 20hz 5ms 5s.MP4

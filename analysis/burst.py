@@ -39,7 +39,8 @@ class Burst:
     
     def get_stim_on_frames(self):
         stim_start_frame, stim_end_frame = self.get_stim_startend_frame()
-        finterval = int(stim_end_frame - stim_start_frame) # frame interval
+        # finterval = int(stim_end_frame - stim_start_frame) # frame interval 
+        finterval = 299.7
         start_frame, end_frame = self.get_startend_frame()
         
         # finterval 나눈 나머지로 on/off 판단
