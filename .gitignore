@@ -2,6 +2,7 @@
 *.mp4 
 *.xlsx
 *.png
+*.txt
 
 # videos
 videos/
